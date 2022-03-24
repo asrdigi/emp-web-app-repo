@@ -1,7 +1,6 @@
 pipeline {
   agent any
-  stages {	
-   dir('emp-web-app'){
+  stages {	   
 	stage('Maven Compile'){
 		steps{
 			echo 'Project compile stage'
@@ -39,5 +38,5 @@ pipeline {
 	} 		
    }
   }
-  }
+  
 
