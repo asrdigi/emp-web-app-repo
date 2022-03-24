@@ -1,6 +1,7 @@
 pipeline {
   agent any
   stages {	
+   dir('emp-web-app'){
 	stage('Maven Compile'){
 		steps{
 			echo 'Project compile stage'
@@ -36,6 +37,6 @@ pipeline {
 			bat label: 'Project packaging', script: '''mvn package'''
 		}
 	} 		
-    
+   }
   }
 }
