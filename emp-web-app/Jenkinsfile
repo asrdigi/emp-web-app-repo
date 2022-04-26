@@ -4,7 +4,7 @@ pipeline {
 	stage('Maven Compile'){
 		steps{
 			echo 'Project compile stage'
-			bat label: 'Compilation running', script: '''mvn compile'''
+			bat label: 'Compilation running', script: '''mvn - f emp-web-app/pom.xml compile'''
 	       	}
 	}
 	
